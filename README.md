@@ -23,4 +23,9 @@
 
 ![image](https://user-images.githubusercontent.com/71001536/201486498-bfc1c69a-2471-40bd-972e-5a97b6c00f92.png)
 
+* Apply the terraform configuraton file 
+
+`terraform apply --auto-approve`
+
+![image](https://user-images.githubusercontent.com/71001536/201489323-a0aa9335-df43-4cb9-bc0c-e63f3a41b502.png)
 
