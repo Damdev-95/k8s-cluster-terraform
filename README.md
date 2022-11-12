@@ -21,6 +21,6 @@
 ![image](https://user-images.githubusercontent.com/71001536/201486078-9cd72094-0327-4138-892c-392d08136fb7.png)
 
 
-![Uploading image.png…]()
+![image](https://user-images.githubusercontent.com/71001536/201486498-bfc1c69a-2471-40bd-972e-5a97b6c00f92.png)
 
 
