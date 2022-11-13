@@ -5,14 +5,14 @@ metadata:
 spec:
   selector:
     matchLabels:
-      name: hello-kuberneteseks
+      name: hello-kubernetes
   template:
     metadata:
       labels:
         name: hello-kubernetes
     spec:
       containers:
-        - name: app
-          image: paulbouwer/hello-kubernetes:1.8
-          ports:
-            - containerPort: 8080
+      - name: app
+        image: paulbouwer/hello-kubernetes:1.8
+        ports:
+          - containerPort: 8080
