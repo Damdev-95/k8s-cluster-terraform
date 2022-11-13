@@ -93,7 +93,30 @@ helm install ingress incubator/aws-alb-ingress-controller \
 
 ![image](https://user-images.githubusercontent.com/71001536/201513262-6fa01543-1609-4715-8f46-6cc9f60ab7f5.png)
 
+* Deploy the service loadbalancer on the cluster `kubectl apply -f manifest/loadbalancer.yaml`
+
+![image](https://user-images.githubusercontent.com/71001536/201532391-13c0feea-837c-41a9-b5d8-be86a52c6b1c.png)
+
+![image](https://user-images.githubusercontent.com/71001536/201532428-e2b3ebd9-2513-4205-9a89-bbd0707b602b.png)
+
+
 * Deploy the ingress.yaml for the service
+
+```
+wget https://raw.githubusercontent.com/kubernetes-sigs/aws-alb-ingress-controller/v1.1.9/docs/examples/alb-ingress-controller.yaml
+kubectl apply -f https://raw.githubusercontent.com/kubernetes-sigs/aws-alb-ingress-controller/v1.1.9/docs/examples/rbac-role.yaml
+```
+## the cluster name and vpc id is change in the alb-ingress-controller.yaml
+
+![image](https://user-images.githubusercontent.com/71001536/201527040-63a66c82-7a54-4c65-8e75-e975dc3ef44f.png)
+
+
+![image](https://user-images.githubusercontent.com/71001536/201528085-272a19cf-f04b-46ed-84fb-faa4dd689d43.png)
+
+![image](https://user-images.githubusercontent.com/71001536/201528137-a0e139af-adb6-429e-9cfc-89f8813b882e.png)
+
+
+
 
 
 
