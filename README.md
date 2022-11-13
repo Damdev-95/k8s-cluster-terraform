@@ -68,7 +68,33 @@ echo 'export PATH=$PATH:$HOME/bin' >> ~/.bashrc
 
 ![image](https://user-images.githubusercontent.com/71001536/201512080-c3041251-00a5-407f-bfa1-9af2f28c0fd9.png)
 
-* Configuration of ingress servicve and alb-ingress controller manaifest file to expose service to external 
+*  ALB Ingress Controller can be installed with Helm 
+* Install Helm package
+```
+$ curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
+$ chmod 700 get_helm.sh
+$ ./get_helm.sh
+```
+
+![image](https://user-images.githubusercontent.com/71001536/201512846-f9bf14a7-da44-4c51-9519-4b742d6f0faa.png)
+
+* Install the collection of YAML files necessary to run the ALB Ingress Controller. Add the following repository
+
+` helm repo add incubator https://charts.helm.sh/incubator`
+
+* Install the ALB Ingress Controller in my cluster
+
+```
+helm install ingress incubator/aws-alb-ingress-controller \
+  --set autoDiscoverAwsRegion=true \
+  --set autoDiscoverAwsVpcID=true \
+  --set clusterName=terraform-eks
+```
+
+![image](https://user-images.githubusercontent.com/71001536/201513262-6fa01543-1609-4715-8f46-6cc9f60ab7f5.png)
+
+* Deploy the ingress.yaml for the service
+
 
 
 
