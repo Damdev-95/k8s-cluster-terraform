@@ -52,6 +52,26 @@ echo 'export PATH=$PATH:$HOME/bin' >> ~/.bashrc
 
 ![image](https://user-images.githubusercontent.com/71001536/201511439-ca332277-8e27-412d-a724-64633e878a0b.png)
 
+* Deploy the manifest for the pods deployment 
+
+`kubectl apply -f manifests/deployment.yaml`
+
+![image](https://user-images.githubusercontent.com/71001536/201511860-4c441d9a-e3dd-4117-b0ad-390a0dd5c5a0.png)
+
+* Validate the deployment using `kubectl get pods`
+
+![image](https://user-images.githubusercontent.com/71001536/201511930-526d28dd-2224-4fa2-8ba1-c2e42553c9b0.png)
+
+* Testing the deployment using the port forward 
+
+`kubectl port-forward hello-kubernetes-6bf86759db-7jf7j 8080:8080`
+
+![image](https://user-images.githubusercontent.com/71001536/201512080-c3041251-00a5-407f-bfa1-9af2f28c0fd9.png)
+
+* Configuration of ingress servicve and alb-ingress controller manaifest file to expose service to external 
+
+
+
 
 
 
