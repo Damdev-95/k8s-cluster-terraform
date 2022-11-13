@@ -31,3 +31,29 @@
 
 
 ![image](https://user-images.githubusercontent.com/71001536/201489766-5903a5b3-4d0f-4d86-afdc-774d032507ce.png)
+
+* Copy the output of the terraform configuration to the  `~/.kube/config`
+
+* Installing aws-iam-authenticator
+This enables using AWS IAM credentials to authenticate to a Kubernetes cluster 
+
+```
+curl -Lo aws-iam-authenticator https://github.com/kubernetes-sigs/aws-iam-authenticator/releases/download/v0.5.9/aws-iam-authenticator_0.5.9_linux_amd64
+chmod +x ./aws-iam-authenticator
+mkdir -p $HOME/bin && cp ./aws-iam-authenticator $HOME/bin/aws-iam-authenticator && export PATH=$PATH:$HOME/bin
+echo 'export PATH=$PATH:$HOME/bin' >> ~/.bashrc
+```
+
+* Communicate with Kuberbetes cluster  using `kubectl get all `
+
+![image](https://user-images.githubusercontent.com/71001536/201511347-0b94734a-5d23-4937-aa9b-9e2305e1b04e.png)
+
+* Get the pods in the cluster using 'kubectl get pods --all-namespaces'
+
+![image](https://user-images.githubusercontent.com/71001536/201511439-ca332277-8e27-412d-a724-64633e878a0b.png)
+
+
+
+
+
+
