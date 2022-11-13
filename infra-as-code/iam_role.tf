@@ -66,3 +66,17 @@ resource "aws_iam_role_policy_attachment" "k8s_node-AmazonEC2ContainerRegistryRe
   policy_arn = "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly"
   role       = aws_iam_role.k8s_node.name
 }
+
+
+resource "aws_iam_policy" "worker_policy" {
+  name        = "worker-policy"
+  description = "Worker policy for the ALB Ingress"
+
+  policy = file("iam-policy.json")
+}
+
+resource "aws_iam_policy_attachment" "k8s-alb-ingress" {
+  name       = "k8s-alb-ingress"
+  roles      = [aws_iam_role.k8s_node.name]
+  policy_arn = aws_iam_policy.worker_policy.arn
+}

@@ -11,6 +11,4 @@ resource "aws_eks_cluster" "hello_world" {
     aws_iam_role_policy_attachment.k8s_cluster-AmazonEKSClusterPolicy,
     aws_iam_role_policy_attachment.k8s_cluster-AmazonEKSVPCResourceController,
   ]
-  # write_kubeconfig   = true
-  # config_output_path = "./
 }

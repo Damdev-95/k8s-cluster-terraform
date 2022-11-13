@@ -5,7 +5,7 @@ metadata:
 spec:
   selector:
     matchLabels:
-      name: hello-kubernetes
+      name: hello-kuberneteseks
   template:
     metadata:
       labels:
